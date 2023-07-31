@@ -3,6 +3,15 @@
 <head>
     <title>WEB1 - HTML</title>
     <meta charset="utf-8">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5XTC326PSJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5XTC326PSJ');
+</script>
 </head>
 <body>
     <h1><a href="index.html">WEB</a></h1>
@@ -93,7 +102,9 @@
     <ol>
         <li>웹사이트를 링크로 엮으면 웹페이지가 됨. 목차에 링크를 달고, 링크 정보 속성에 각 목차에 맞는 html 문서(웹사이트) 링크를 넣어 주면 됨.</li>
         <li>이 파일이 html 파일이라는 의미에서 제일 위에 관용적으로 '!doctype html'이라고 써 주면 됨.</li>
-        <li>DISQUS, LiveRe 등의 서비스를 사용해 웹페이지에 댓글 기능을 구현할 수 있음. 댓글 기능은 백엔드 기술이 필요하지만 이러한 서비스로 한번 구현해 볼 수는 있는 것. 다만 DISQUS를 이용하면 파일 형태로 열었을 땐 보안상의 이유로 서비스를 사용할 수 없음. 웹 서버로 열어야 작동함.</li>
+        <li>댓글 기능 구현하기: DISQUS, LiveRe 등의 서비스를 사용해 웹페이지에 댓글 기능을 구현할 수 있음. 댓글 기능은 백엔드 기술이 필요하지만 이러한 서비스로 한번 구현해 볼 수는 있는 것. 다만 DISQUS를 이용하면 파일 형태로 열었을 땐 보안상의 이유로 서비스를 사용할 수 없음. 웹 서버로 열어야 작동함.</li>
+        <li>채팅 서비스 구현하기: tawk라는 서비스로 구현 가능.웹 서버로 열어야 작동함.</li>
+        <li>웹페이지 사용자 분석하기: Google Analytics를 활용해 사용자를 분석할 수 있음. 사용자 메뉴는 연령, 성별, 국가, 장치 등 사용자의 정보를 보여줌. 수명 주기는 사용자가 사이트에서 한 일을 보여주는 정보를 제공함. 인구 통계와 수명 주기에서 중요한 건 시간.</li>
     </ol> 
     <br><br><h3>웹페이지 배포</h3>
     <ol>
@@ -135,6 +146,21 @@
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </p>
+    <p>
+        <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/64c7cab294cf5d49dc678c56/1h6m6vigf';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
     </p>
 </body>
 </html>
