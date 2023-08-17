@@ -13,7 +13,10 @@
   gtag('config', 'G-5XTC326PSJ');
 </script>
     <style>
-        a{color: chocolate; text-decoration: none;}
+        a{color: black; text-decoration: none;}
+        h1{font-size:45px; text-align: center;}
+        #active{color: brown;}
+        .saw{color: darkgray;}
     </style>
 </head>
 <body>
@@ -21,8 +24,8 @@
     <h2>CSS</h2>
     <p>여기는 CSS 페이지</p>
     <br><ol><strong>프론트엔드</strong>
-        <li><a href="1.html">HTML</a></li>
-        <li><a href="2.html" style="color:rgb(255, 196, 0); text-decoration: underline; font-weight: bold;">CSS</a></li>
+        <li><a href="1.html" class="saw">HTML</a></li>
+        <li><a href="2.html" class="saw active" id="active">CSS</a></li>
         <li><a href="3.html">JavaScript</a></li>
         <li><a href="checkbox.html">Checkbox</a></li>
     </ol>
@@ -32,16 +35,28 @@
             웹브라우저가 CSS를 인식하는 법
         </h3>
         <ol>
-            <li>style 태그를 활용하는 것. 이 태그는 HTML의 문법이지만 태그의 내용을 CSS의 문법으로 읽으라고 명령함. style 태그 안에 있는 속성만으로는 어디에 그것을 적용할지 알 수 없음. 이때 필요한 것이 선택자(selector)이고 '선택자 {효과/선언(declaraition)}'으로 표현함. 효과 안에는 속성(property)과 속성값(property value)가 있음. 효과를 구분하는 역할은 세미콜론이 함. 따라서 효과를 쓰고 난 후엔 세미콜론 추가할 것.</li>
-            <!--a {color: red}에서 a는 선택자, 중괄호 안에 있는 것은 효과, color는 속성, red는 속성값-->
-            <li>속성을 사용하는 것. style 속성을 쓰고 큰따옴표로 속성의 값을 입력하면 웹브라우저는 그것을 CSS의 문법에 따라서 해석하고 속성이 위치한 태그에 적용함. 속성 자체는 HTML의 속성이지만 CSS의 문법으로 읽는 것. style 속성을 직접 사용한다면 속성이 위치한 태그에 효과를 줄 것이기 때문에 선택자가 필요하지 않음.</li>
+            <li>style 태그를 활용하는 것. 이 태그는 HTML의 문법이지만 태그의 내용을 CSS의 문법으로 읽으라고 명령함. style 태그 안에 있는 속성만으로는 어디에 그것을 적용할지 알 수 없음. 이때 필요한 것이 선택자(selector).</li>
+            <li>속성을 사용하는 것. style 속성을 쓰고 큰따옴표로 속성의 값을 입력하면 웹브라우저는 그것을 CSS의 문법에 따라서 해석하고 속성이 위치한 태그에 적용함. 속성 자체는 HTML의 속성이지만 CSS의 문법으로 읽는 것. style 속성을 직접 사용한다면 속성이 위치한 태그에 효과를 줄 것이기 때문에 선택자가 필요하지 않음.
         </ol>
     </p>
     <br><br><br><p>
-        <h3>속성</h3>
+        <h3>선택자</h3>
+        <ol>
+        <li>'선택자 {효과/선언(declaraition)}'으로 표현함. 효과 안에는 속성(property)과 속성값(property value)가 있음. 효과를 구분하는 역할은 세미콜론이 함. 따라서 효과를 쓰고 난 후엔 세미콜론 추가할 것.</li><li>예시: a {color: red}에서 a는 선택자, 중괄호 안에 있는 것은 효과, color는 속성, red는 속성값</li><li>선택자의 우선순위: id > class > tag. class만 있을 때는 제일 마지막에 추가한 것이 우선순위가 가장 높음. tag 선택자로 전체적인 디자인을 하고, id 선택자로 예외를 두는 것.</li>
+    </li>
+    <li>element 선택자는 태그를 의미함.</li>
+    <li>.은 class를 의미함.</li>
+    <li>#은 id를 의미함.</li>
+    </ol>
+    </p>
+    <br><br><br><p>
+        <h3>속성(property)</h3>
         <ol>
             <li>color: 태그에 있는 글자의 색을 지정함.</li>
             <li>text-decoration: 텍스트의 밑줄 유무와 스타일을 지정하는 속성. none을 추가하면 밑줄 없어짐.</li>
+            <li>font-weight 속성은 텍스트의 굵기를 설정하는 속성.</li>
+            <li>font-size는 텍스트의 크기를 정하는 속성. 속성값이 다양하고, 구체적인 숫자 + %/px도 사용 가능</li>
+            <li>text-align은 텍스트를 정렬하는 속성.</li>
         </ol>
     </p>
     <br><br><br><p>
