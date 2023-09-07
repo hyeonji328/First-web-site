@@ -13,7 +13,10 @@
   gtag('config', 'G-5XTC326PSJ');
 </script>
     <style>
-        a{color: brown; text-decoration: none;}
+        a{color: rgb(0, 0, 0); text-decoration: none;}
+        h1{font-size:45px; text-align: center;}
+        .saw{color: darkgray;}
+        #active{color: brown;}
     </style>
     <!--위의 코드의 뜻은 문서의 모든 a 태그의 폰트색을 바꾸라는 것-->
 </head>
@@ -22,10 +25,11 @@
     <h2>HTML</h2>
     <P><a href="https://www.w3.org/TR/2011/WD-html5-20110405/" target="_blank" title="html specification">Hypertext Markup Language (HTML)</a> is the standard markup language for <strong>creating <u>web</u> pages</strong> and web applications.</p>
     <br><ol><strong>프론트엔드</strong>
-        <li><a href="1.html" style="color:rgb(255, 196, 0); text-decoration: underline; font-weight: bold;">HTML</a></li>
-        <li><a href="2.html">CSS</a></li>
-        <li><a href="3.html">JavaScript</a></li>
-        <li><a href="checkbox.html">Checkbox</a></li>
+        <li><a href="1.html" class="saw" id="active">HTML</a></li>
+        <li><a href="2.html" class="saw">CSS</a></li>
+        <li><a href="3.html" class="saw">JavaScript</a></li>
+        <li><a href="checkbox.html" class="saw">Checkbox</a></li>
+        <li><a href="box.html" class="saw">박스 모델</a></li>
     </ol>
     <ol><strong>생활코딩 WEB1 강의 필기</strong>
         <li>연습</li>
@@ -64,6 +68,7 @@
         <li>입력 커서를 여러 개 만들 때 alt키를 누르고 클릭하면 됨.</li>
         <li>tab키를 쓰면 들여 쓰기를 할 수 있음.</li>
         <li>ctrl+b는 Visual Studio Code의 EXPLORER 창을 여닫는 키.</li>
+        <li>마우스 우클릭의 '검사' 항목. 문서의 태그, 속성 등을 분석한 자료를 한눈에 볼 수 있는 개발자 도구.</li>
     </ol>
     <br><br><h3>태그</h3>
     <ol>
@@ -84,8 +89,9 @@
         <li>div 태그는 division의 약자로 레이아웃을 만들 때 사용함. 여러 속성을 추가해서 활용. 함께 쓰는 속성으로는 style, margin, width, height, background-color, float, border 등이 있음.</li>
         <li>input 태그는 입력 형식을 구현하기 위한 태그. 함께 쓰는 type 속성의 속성값에 따라 화면에 다양한 걸 표시할 수 있음.</li>
         <li>iframe 태그는 해당 웹페이지에 다른 html 파일을 불러와서 삽입, 합성할 수 있는 태그. src 속성으로 URL을 추가하고 height와 width 속성으로 크기 조절.</li>
-        <li>!-- 콘텐츠 -- 를 쓰면 그 안에 있는 콘텐츠는 없는 셈치라고 명령하는 것.</li>
+        <li>!-- 콘텐츠 -- 를 쓰면 그 안에 있는 콘텐츠는 없는 셈 치라고 명령하는 것.</li>
         <li>style 태그는 HTML의 문법이면서 동시에 태그 안의 내용을 CSS의 문법으로 해석하라고 컴퓨터에 명령함.</li>
+        <li>/* 콘텐츠 */는 주석을 달 때 활용함.</li>
     </ol>
     <br><br><h3>속성</h3><p><h4>태그만으로 부족한 정보를 채우는 게 속성. 여러 개를 쓸 수 있고 순서에 상관없이 결과값은 같음.</h4></p>
     <ol>
@@ -98,13 +104,19 @@
         <li>target 속성은 a 태그로 건 링크가 열릴 위치를 명시하는 속성. _blank는 새 탭에서 열기, _self는 현재 프레임에서 열기로 기본값, _parent는 현재 프레임의 부모 프레임에서 열기, _top은 현재 윈도우 전체에서 열기, 프레임 이름을 적으면 그 프레임에서 열기.</li>
         <li>title 속성은 a 태그로 건 링크가 어떤 내용인지 툴팁으로 미리 알려 주는 속성.</li>
         <li>float 속성은 정렬을 좌우하는 속성, 가운데 정렬은 안 됨.</li>
-        <li>margin 속성은 여백을 주는 속성. 위, 아래, 옆에 px이나 %로 수치를 입력해 여백을 줄 수 있음.</li>
-        <li>border 속성은 테두리의 굵기를 정하는 속성. 숫자가 클수록 굵어짐.</li>
+        <li>margin 속성은 테두리와 테두리 사이에 여백을 주는 속성. 위, 아래, 옆에 px이나 %로 수치를 입력해 여백을 줄 수 있음.</li>
+        <li>border 속성은 테두리를 지정하는 속성. width, color, style 등을 세부적으로 조정할 수 있음.</li>
         <li>background-color 속성은 배경의 색을 정하는 속성.</li>
         <li>color는 글씨의 색을 바꾸는 속성. style 속성 안에 사용함.</li>
         <li>type 속성은 input 태그의 속성으로, 해당 태그가 나타낼 타입을 명시함. 다양한 속성값이 있음. checkbox는 체크박스를 정의함. 속성값은 button, color, date, datetime-local, email, file, hidden, image, month, number, password, radio, range, reset, search, submit, tel, text, time, url, week 등.</li>
         <li>class 속성은 어떠한 요소들을 하나의 클래스로 묶어 동일한 스타일을 적용하기 위해서 사용함. 속성값 saw를 사용하면 보았던 요소라는 정보를 줄 수 있음. 속성값 active는 지금 실행하고 있는 페이지라는 뜻. class에는 여러 개의 속성값을 쓸 수 있지만, 최근에 명령한 것(제일 마지막에 적은 것)에 우선순위가 적용된다는 단점이 있음.</li>
         <li>id 속성은 속성값에 절대적인 우위를 주는 속성. 따라서 id 속성에 쓴 속성값은 동일 문서 내에서 다시 쓰면 안 됨. id의 속성값은 class의 속성값보다 나중에 등장하더라도 순위가 밀리지 않고 적용됨.</li>
+        <li>display 속성을 쓰면 태그가 사용하는 화면의 부피를 지정할 수 있음. block level element를 inline element로 바꾸거나, 그 반대도 가능.속성값에 block 또는 inline을 쓰면 됨. 속성값 none을 쓰면 태그가 화면에서 보이지 않음.</li>
+        <li>text-decoration: 텍스트의 밑줄 유무와 스타일을 지정하는 속성. none을 추가하면 밑줄 없어짐.</li>
+        <li>font-weight 속성은 텍스트의 굵기를 설정하는 속성.</li>
+        <li>font-size는 텍스트의 크기를 정하는 속성. 속성값이 다양하고, 구체적인 숫자 + %/px도 사용 가능</li>
+        <li>text-align은 텍스트를 정렬하는 속성.</li>
+        <li>padding 속성은 콘텐츠와 테두리 사이에 간격을 주는 속성.</li>
     </ol>
     <br><br><h3>웹페이지 만들기</h3>
     <ol>
