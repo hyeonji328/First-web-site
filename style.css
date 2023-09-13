@@ -1,0 +1,13 @@
+a{color: black; text-decoration: none;}
+h1{font-size:45px; text-align: center; border-bottom: 2px solid black; margin: 0; padding: 30px;}
+#active{color: brown;}
+.saw{color: darkgray;}
+#grid{display: grid; grid-template-columns: 150px 1fr;}
+#grid ol{margin: 0; padding: 33px; width: 100px; border-right: 1px solid black;}
+  /*#grid ol은 id 값이 grid인 부모 태그를 가진 ol이라는 뜻. 보다 구체적으로 묶을 수 있는 선택자.*/
+#article{padding-left: 45px;}
+@media screen and (max-width:800px) {
+    #grid{display: block;}
+    #grid ol{border-right: none;}
+    h1{border-bottom: none; font-size: 35px; text-align: left;}
+    }

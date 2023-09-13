@@ -4,152 +4,140 @@
     <title>WEB1 - HTML</title>
     <meta charset="utf-8">
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5XTC326PSJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5XTC326PSJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  gtag('config', 'G-5XTC326PSJ');
-</script>
+        gtag('config', 'G-5XTC326PSJ');
+    </script>
+    <link rel="stylesheet" href="style.css">
     <style>
-        a{color: rgb(0, 0, 0); text-decoration: none;}
-        h1{font-size:45px; text-align: center;}
-        .saw{color: darkgray;}
-        #active{color: brown;}
+        #only ul li{font-size: 15px; color: rgb(190, 175, 165);}
+        body{margin: 10px;}
     </style>
     <!--위의 코드의 뜻은 문서의 모든 a 태그의 폰트색을 바꾸라는 것-->
 </head>
 <body>
     <h1><a href="index.html">WEB</a></h1>
-    <h2>HTML</h2>
-    <P><a href="https://www.w3.org/TR/2011/WD-html5-20110405/" target="_blank" title="html specification">Hypertext Markup Language (HTML)</a> is the standard markup language for <strong>creating <u>web</u> pages</strong> and web applications.</p>
-    <br><ol><strong>프론트엔드</strong>
-        <li><a href="1.html" class="saw" id="active">HTML</a></li>
-        <li><a href="2.html" class="saw">CSS</a></li>
-        <li><a href="3.html" class="saw">JavaScript</a></li>
-        <li><a href="checkbox.html" class="saw">Checkbox</a></li>
-        <li><a href="box.html" class="saw">박스 모델</a></li>
-        <li><a href="grid.html" class="saw">그리드</a></li>
-    </ol>
-    <ol><strong>생활코딩 WEB1 강의 필기</strong>
-        <li>연습</li>
-        <li>단축키</li>
-        <li>태그</li>
-        <li>속성</li>
-        <li>웹페이지 만들기</li>
-        <li>웹페이지 배포</li>
-        <li>개념</li>
-    </ol>
-    <br><br><br><h3>연습</h3><p style="margin-top: 40px;"><h4><a href="https://youtu.be/zfLcdBuB7NY" target="_blank" title="Here Again_YouTube">Here Again</a></h4></p><img src="worship.jpg" width="500">
-    <p><iframe width="500" height="315" src="https://www.youtube.com/embed/HyjdUKMSM4E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-    <p>Can't go back to the beginning. Can't control what tomorrow will bring. But I know here in the middle, is the place where you promised to be. I'm not enough unless you come. Will you meet me here again?</p><p style="margin-top: 40px;">As I walk now through the valley. Let your love rise above every fear. Like the sun shaping the shadow, in my weakness, your glory appears. I'm not enough unless you come. Will you meet me here again?</p>
-    <p style="margin-top: 65px;"><h4>표</h4><table style="border: 2px solid black">
-        <tr>
-            <th>Month</th>
-            <th>Savings</th>
-        </tr>
-        <tr>
-            <td>January</td>
-            <td>$100</td>
-        </tr>
-        <tr>
-            <td>February</td>
-            <td>$80</td>
-        </tr>
-    </table></p>
-    <p style="margin-top: 65px;"><h4>레이아웃</h4>
-        <div style="background-color: rgb(83, 64, 38); color: rgb(255, 255, 255);">첫 번째 영역</div>
-        <div style="width: 100px; height: 150px; background-color: rgb(122, 102, 63); color: rgb(255, 255, 255);">두 번째 영역</div>
-        <div style="width: 100px; height: 100px; background-color: rgb(207, 173, 121);">세 번째 영역</div>
-        <div style="width: 130px; height: 100px; border: 1px solid rgb(49, 34, 0); float: right; background-color: rgb(248, 216, 173);">네 번째 영역</div>
-    <br><br><br><h3>Tips</h3>
-    <ol>
-        <li>웹 브라우저에서 html파일을 읽게 하고 싶을 때 단축키는 ctrl+O.</li>
-        <li>입력 커서를 여러 개 만들 때 alt키를 누르고 클릭하면 됨.</li>
-        <li>tab키를 쓰면 들여 쓰기를 할 수 있음.</li>
-        <li>ctrl+b는 Visual Studio Code의 EXPLORER 창을 여닫는 키.</li>
-        <li>마우스 우클릭의 '검사' 항목. 문서의 태그, 속성 등을 분석한 자료를 한눈에 볼 수 있는 개발자 도구.</li>
-        <li>caniuse.com: 현재 웹브라우저들이 html, css, JavaScript 기술을 얼마나 채택하고 있는지 통계를 보여 주는 사이트. 초록색은 쓸 수 있고, 빨강색은 쓸 수 없다는 뜻. 연두색은 부분적으로 지원하고 있다는 의미. 어떤 기술을 사용했을 때 그것을 세계 인구 중 몇 퍼센트가 이용할 수 있는지도 알 수 있는 중요한 사이트.</li>
-    </ol>
-    <br><br><h3>태그</h3>
-    <ol>
-        <li>html 태그는 최상위 태그. Html 파일의 모든 태그가 이 안에 들어감.</li>
-        <li>head 태그는 본문을 설명하는 정보를 묶는 태그. title이나 meta 태그가 이 안에 들어감. body 태그는 본문을 묶는 태그. <strong>Html 파일의 모든 코드는 head나 body 아래 속해야 함.</strong></li>
-        <li>strong 태그는 글씨를 굵게 강조할 때 사용함.</li>
-        <li>u 태그는 밑줄을 그을 때 사용함.</li>
-        <li>h1부터 h6까지는 headings로 제목을 나타내고, 숫자가 작을수록 중요한 정보이며 웹에서 큰 글씨로 표현됨. h 태그를 쓰면 일반 글씨보다 굵게 표현됨.</li>
-        <li>br 태그는 줄바꿈 태그. 단순한 줄바꿈이며 여러 번 써서 원하는 만큼 공백을 만들 수 있음. 닫는 태그 없이 여는 태그만 사용함.</li>
-        <li>p 태그는 단락 태그. 여는 태그, 닫는 태그를 한 쌍으로 써야 함. br 태그보다 완성도 있는 태그. br 태그처럼 줄을 바꿀 수 있지만, 여러 번 사용할 수 없고, 정해진 대로 한 줄만 줄바꿈을 하기 때문에 시각적인 자유도가 떨어짐. 이걸 더 정교하게 보완할 때 쓸 수 있는 기술이 css; 위에서 사용한 style.</li>
-        <li>img 태그는 이미지를 삽입하는 태그. 하지만 태그의 이름만으로는 정보가 부족해서 '속성'을 사용해야 함, 이 경우에 사용하는 속성은 src. 저작권 구애받지 않고 이미지 사용할 수 있는 유용한 사이트: unsplash.com.</li>
-        <li>parent와 child. 포함하는 태그는 부모, 포함되는 태그는 자식. 둘의 관계는 바뀔 수도 있음.</li>
-        <li>li 태그는 목차 list를 만드는 태그. 항상 부모 태그인 ul 태그나 ol 태그가 있음. ul 태그는 항상 li 태그의 부모 태그. 리스트의 어디서부터 어디까지가 하나인지 그룹핑하는 역할. unordered list. ol 태그는 자동으로 목차를 넘버링하는 태그. ordered list.</li>
-        <li>table 태그는 표를 만드는 태그. 한 표에 한 쌍만 존재함. tr/table row/ 태그, th/table header/ 태그, td/table cell/ 태그와 함께 다니는 부모 태그. 자식 태그는 여러 개 가능.</li>
-        <li>title 태그는 웹 페이지의 제목을 나타내는 태그. 브라우저가 책 제목의 표지와 같이 인식하는 것.</li>
-        <li>meta 태그는 브라우저가 html 문서의 문자 인코딩 방식을 명시하는 태그. utf-8로 쓰여졌다면 meta 태그에 속성 charset을 써서 charset="utf-8"이라고 적으면 됨.</li>
-        <li>a(anchor) 태그는 링크(Hyper Text)를 거는 태그.</li>
-        <li>div 태그는 division의 약자로 레이아웃을 만들 때 사용함. 아무 의미가 없고, 디자인 용도로만 사용하는 태그. 기본적으로 block level element. 여러 속성을 추가해서 활용. 함께 쓰는 속성으로는 style, margin, width, height, background-color, float, border 등이 있음.</li>
-        <li>span 태그도 div 태그와 마찬가지로 디자인을 위한 태그. 다만, 이 태그는 inline element임. 따라서 사용하고 싶은 콘텐츠의 크기에 따라 사용하면 됨.</li>
-        <li>input 태그는 입력 형식을 구현하기 위한 태그. 함께 쓰는 type 속성의 속성값에 따라 화면에 다양한 걸 표시할 수 있음.</li>
-        <li>iframe 태그는 해당 웹페이지에 다른 html 파일을 불러와서 삽입, 합성할 수 있는 태그. src 속성으로 URL을 추가하고 height와 width 속성으로 크기 조절.</li>
-        <li>!-- 콘텐츠 -- 를 쓰면 그 안에 있는 콘텐츠는 없는 셈 치라고 명령하는 것.</li>
-        <li>style 태그는 HTML의 문법이면서 동시에 태그 안의 내용을 CSS의 문법으로 해석하라고 컴퓨터에 명령함.</li>
-        <li>/* 콘텐츠 */는 주석을 달 때 활용함.</li>
-    </ol>
-    <br><br><h3>속성</h3><p><h4>태그만으로 부족한 정보를 채우는 게 속성. 여러 개를 쓸 수 있고 순서에 상관없이 결과값은 같음.</h4></p>
-    <ol>
-        <li>style 속성은 태그의 스타일을 지정함. 이걸로 다른 속성을 쓸 수도 있음.</li>
-        <li>src 속성은 태그의 속성 즉, URL을 의미함. 태그만으로는 어떤 정보를 넣을지 알 수 없음. 이때 부족한 정보를 추가하는 속성.</li>
-        <li>width 속성은 가로 크기를 조절할 때 쓰는 속성.</li>
-        <li>height 속성은 세로 크기를 조절할 때 쓰는 속성.</li>
-        <li>charset은 meta 태그와 함께 쓰는 속성. 어떤 문자로 인코딩할지 명시.</li>
-        <li>href(hyper text reference) 속성은 a 태그로 걸 링크의 정보를 제공하는 속성.</li>
-        <li>target 속성은 a 태그로 건 링크가 열릴 위치를 명시하는 속성. _blank는 새 탭에서 열기, _self는 현재 프레임에서 열기로 기본값, _parent는 현재 프레임의 부모 프레임에서 열기, _top은 현재 윈도우 전체에서 열기, 프레임 이름을 적으면 그 프레임에서 열기.</li>
-        <li>title 속성은 a 태그로 건 링크가 어떤 내용인지 툴팁으로 미리 알려 주는 속성.</li>
-        <li>float 속성은 정렬을 좌우하는 속성, 가운데 정렬은 안 됨.</li>
-        <li>margin 속성은 테두리와 테두리 사이에 여백을 주는 속성. 위, 아래, 옆에 px이나 %로 수치를 입력해 여백을 줄 수 있음.</li>
-        <li>border 속성은 테두리를 지정하는 속성. width, color, style 등을 세부적으로 조정할 수 있음.</li>
-        <li>background-color 속성은 배경의 색을 정하는 속성.</li>
-        <li>color는 글씨의 색을 바꾸는 속성. style 속성 안에 사용함.</li>
-        <li>type 속성은 input 태그의 속성으로, 해당 태그가 나타낼 타입을 명시함. 다양한 속성값이 있음. checkbox는 체크박스를 정의함. 속성값은 button, color, date, datetime-local, email, file, hidden, image, month, number, password, radio, range, reset, search, submit, tel, text, time, url, week 등.</li>
-        <li>class 속성은 어떠한 요소들을 하나의 클래스로 묶어 동일한 스타일을 적용하기 위해서 사용함. 속성값 saw를 사용하면 보았던 요소라는 정보를 줄 수 있음. 속성값 active는 지금 실행하고 있는 페이지라는 뜻. class에는 여러 개의 속성값을 쓸 수 있지만, 최근에 명령한 것(제일 마지막에 적은 것)에 우선순위가 적용된다는 단점이 있음.</li>
-        <li>id 속성은 속성값에 절대적인 우위를 주는 속성. 따라서 id 속성에 쓴 속성값은 동일 문서 내에서 다시 쓰면 안 됨. id의 속성값은 class의 속성값보다 나중에 등장하더라도 순위가 밀리지 않고 적용됨.</li>
-        <li>display 속성을 쓰면 태그가 사용하는 화면의 부피를 지정할 수 있음. block level element를 inline element로 바꾸거나, 그 반대도 가능.속성값에 block 또는 inline을 쓰면 됨. 속성값 none을 쓰면 태그가 화면에서 보이지 않음.</li>
-        <li>text-decoration: 텍스트의 밑줄 유무와 스타일을 지정하는 속성. none을 추가하면 밑줄 없어짐.</li>
-        <li>font-weight 속성은 텍스트의 굵기를 설정하는 속성.</li>
-        <li>font-size는 텍스트의 크기를 정하는 속성. 속성값이 다양하고, 구체적인 숫자 + %/px도 사용 가능</li>
-        <li>text-align은 텍스트를 정렬하는 속성.</li>
-        <li>padding 속성은 콘텐츠와 테두리 사이에 간격을 주는 속성.</li>
-        <li>grid 속성은 row와 columm을 이용해 아이템을 자유롭게 배치할 수 있는 속성. grid 이전의 flex는 수평과 수직 중 하나의 방향으로만 레이아웃을 나눌 수 있었지만, grid는 수평과 수직을 동시에 나눌 수 있음. 속성값 fr은 아이템이 쓰는 화면의 단위를 자동으로 조정하는 단위. 텍스트의 양에 따라 태그의 크기까지 자동 조정할 수 있음.</li>
-    </ol>
-    <br><br><h3>웹페이지 만들기</h3>
-    <ol>
-        <li>웹사이트를 링크로 엮으면 웹페이지가 됨. 목차에 링크를 달고, 링크 정보 속성에 각 목차에 맞는 html 문서(웹사이트) 링크를 넣어 주면 됨.</li>
-        <li>이 파일이 html 파일이라는 의미에서 제일 위에 관용적으로 '!doctype html'이라고 써 주면 됨.</li>
-        <li>댓글 기능 구현하기: DISQUS, LiveRe 등의 서비스를 사용해 웹페이지에 댓글 기능을 구현할 수 있음. 댓글 기능은 백엔드 기술이 필요하지만 이러한 서비스로 한번 구현해 볼 수는 있는 것. 다만 DISQUS를 이용하면 파일 형태로 열었을 땐 보안상의 이유로 서비스를 사용할 수 없음. 웹 서버로 열어야 작동함.</li>
-        <li>채팅 서비스 구현하기: tawk라는 서비스로 구현 가능.웹 서버로 열어야 작동함.</li>
-        <li>웹페이지 사용자 분석하기: Google Analytics를 활용해 사용자를 분석할 수 있음. 사용자 메뉴는 연령, 성별, 국가, 장치 등 사용자의 정보를 보여줌. 수명 주기는 사용자가 사이트에서 한 일을 보여주는 정보를 제공함. 인구 통계와 수명 주기에서 중요한 건 시간.</li>
-    </ol> 
-    <br><br><h3>웹페이지 배포</h3>
-    <ol>
-        <li>웹 호스팅<P>- 통신 업체나 전문 웹 개발 회사에서 서버를 임대해 주는 것. 인터넷에 연결된 각 컴퓨터(host)에 소프트웨어까지 빌려주는 사업. Cloud라고도 부름. 쉽지만 배울 수 있는 게 적음.</P><p>- GitHub: 개발자들이 안전하게 소스코드를 보관하고 협업하려고 만들었던 사이트.</p></li>
-        <li>웹 서버<p>- 자신의 컴퓨터에 웹 서버를 직접 설치하는 것. 어렵지만 배울 수 있는 게 많음.</p><p>- Live Server: 웹 서버의 일종. VS code의 확장 기능. 변경 사항이 실시간으로 적용된다는 특징이 있음. Go live 버튼으로 키고, Port 버튼으로 끔.</p></li>
-        <li>웹 호스팅으로 시작해서 웹 서버를 통해 원리를 공부하기.</li>
-        <li>웹 브라우저가 문서를 직접 열면 주소가 file:///Desktop/web/index.html로 뜸. 웹 서버를 통해 문서를 열면 주소는 http://127.0.0.1.5000/index.html로 뜸.</li>
-        <li>http://127.0.0.1.5000/index.html</li>
+    <div id="grid"><ol><strong>프론트엔드</strong>
+            <li><a href="1.html" class="saw" id="active">HTML</a></li>
+                <span id="only">
+                    <ul>
+                        <li>연습</li>
+                        <li>단축키</li>
+                        <li>태그</li>
+                        <li>속성</li>
+                        <li>웹페이지 만들기</li>
+                        <li>웹페이지 배포</li>
+                        <li>개념</li>
+                    </ul>
+                </span>
+            <li><a href="2.html" class="saw">CSS</a></li>
+            <li><a href="3.html" class="saw">JavaScript</a></li>
+            <li><a href="checkbox.html" class="saw">Checkbox</a></li>
+            <li><a href="box.html" class="saw" title="박스 모델 및 미디어쿼리 적용 페이지">박스 모델</a></li>
+            <li><a href="grid.html" class="saw">그리드</a></li>
+            <li><a href="mediaquery.html" class="saw">미디어쿼리</a></li>
+        </ol>
+        <div id="article">
+            <h2>HTML</h2>
+            <P><a href="https://www.w3.org/TR/2011/WD-html5-20110405/" target="_blank" title="html specification">Hypertext Markup Language (HTML)</a> is the standard markup language for <strong>creating <u>web</u> pages</strong> and web applications.</p>
+            <br><br><br><h3>연습</h3><p style="margin-top: 40px;"><h4><a href="https://youtu.be/zfLcdBuB7NY" target="_blank" title="Here Again_YouTube">Here Again</a></h4></p><img src="worship.jpg" width="500">
+            <p><iframe width="500" height="315" src="https://www.youtube.com/embed/HyjdUKMSM4E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+            <p>Can't go back to the beginning. Can't control what tomorrow will bring. But I know here in the middle, is the place where you promised to be. I'm not enough unless you come. Will you meet me here again?</p><p style="margin-top: 40px;">As I walk now through the valley. Let your love rise above every fear. Like the sun shaping the shadow, in my weakness, your glory appears. I'm not enough unless you come. Will you meet me here again?</p>
+            <br><br><br><h3>Tips</h3>
             <ul>
-                <li>http: Hypertext Transfer Protocol, 하이퍼텍스트 통신 규약.</li>
-                <li>127.0.0.1: Internet Protocol Address(인터넷에서 사용하는 주소, ip)의 일종. 약 43억 개가 있고, 그중 127.0.0.1은 전 세계에서 자신의 컴퓨터를 나타낼 때 쓰기로 약속한 ip. 따라서 주소창에 이 ip가 떠 있다면, 웹 브라우저가 자기 컴퓨터의 웹 서버에 접속하려고 시도하고 있다는 의미. 주로 개발할 때 많이 사용함.</li>
-                <li>Port: 하나의 컴퓨터는 여러 웹 서버와 연결되어 있음. 이때 각 서버는 각자의 포트 번호를 가지고 있음.</li>
+                <li>웹 브라우저에서 html파일을 읽게 하고 싶을 때 단축키는 ctrl+O.</li>
+                <li>입력 커서를 여러 개 만들 때 alt키를 누르고 클릭하면 됨.</li>
+                <li>tab키를 쓰면 들여 쓰기를 할 수 있음.</li>
+                <li>ctrl+b는 Visual Studio Code의 EXPLORER 창을 여닫는 키.</li>
+                <li>마우스 우클릭의 '검사' 항목. 문서의 태그, 속성 등을 분석한 자료를 한눈에 볼 수 있는 개발자 도구.</li>
+                <li>caniuse.com: 현재 웹브라우저들이 html, css, JavaScript 기술을 얼마나 채택하고 있는지 통계를 보여 주는 사이트. 초록색은 쓸 수 있고, 빨강색은 쓸 수 없다는 뜻. 연두색은 부분적으로 지원하고 있다는 의미. 어떤 기술을 사용했을 때 그것을 세계 인구 중 몇 퍼센트가 이용할 수 있는지도 알 수 있는 중요한 사이트.</li>
             </ul>
-        <li>모바일 웹 브라우저에서 컴퓨터의 웹 서버에 접속하기<p>- 같은 네트워크를 공유하고 있어야 함.</p><p>- 컴퓨터의 ip 주소와 포트 번호를 모바일 웹 브라우저에 입력하면 접속됨.</p></li>
-    </ol>
-    <br><br><h3>개념</h3>
-    <ol>
-        <li>Web Browser: 정보를 요청하는 client computer. 웹 클라이언트라고 불러도 OK.</li>
-        <li>Web Server: 요청에 응답해 정보를 전송하는 server computer. </li>
-        <li>Ex: 게임 클라이언트-게임 서버, 채팅 클라이언트-채팅 서버 등</li>
-    </ol>
+            <br><br><h3>태그</h3>
+            <ul>
+                <li>html 태그는 최상위 태그. Html 파일의 모든 태그가 이 안에 들어감.</li>
+                <li>head 태그는 본문을 설명하는 정보를 묶는 태그. title이나 meta 태그가 이 안에 들어감. body 태그는 본문을 묶는 태그. <strong>Html 파일의 모든 코드는 head나 body 아래 속해야 함.</strong></li>
+                <li>strong 태그는 글씨를 굵게 강조할 때 사용함.</li>
+                <li>u 태그는 밑줄을 그을 때 사용함.</li>
+                <li>h1부터 h6까지는 headings로 제목을 나타내고, 숫자가 작을수록 중요한 정보이며 웹에서 큰 글씨로 표현됨. h 태그를 쓰면 일반 글씨보다 굵게 표현됨.</li>
+                <li>br 태그는 줄바꿈 태그. 단순한 줄바꿈이며 여러 번 써서 원하는 만큼 공백을 만들 수 있음. 닫는 태그 없이 여는 태그만 사용함.</li>
+                <li>p 태그는 단락 태그. 여는 태그, 닫는 태그를 한 쌍으로 써야 함. br 태그보다 완성도 있는 태그. br 태그처럼 줄을 바꿀 수 있지만, 여러 번 사용할 수 없고, 정해진 대로 한 줄만 줄바꿈을 하기 때문에 시각적인 자유도가 떨어짐. 이걸 더 정교하게 보완할 때 쓸 수 있는 기술이 css; 위에서 사용한 style.</li>
+                <li>img 태그는 이미지를 삽입하는 태그. 하지만 태그의 이름만으로는 정보가 부족해서 '속성'을 사용해야 함, 이 경우에 사용하는 속성은 src. 저작권 구애받지 않고 이미지 사용할 수 있는 유용한 사이트: unsplash.com.</li>
+                <li>parent와 child. 포함하는 태그는 부모, 포함되는 태그는 자식. 둘의 관계는 바뀔 수도 있음.</li>
+                <li>li 태그는 목차 list를 만드는 태그. 항상 부모 태그인 ul 태그나 ol 태그가 있음. ul 태그는 항상 li 태그의 부모 태그. 리스트의 어디서부터 어디까지가 하나인지 그룹핑하는 역할. unordered list. ol 태그는 자동으로 목차를 넘버링하는 태그. ordered list.</li>
+                <li>table 태그는 표를 만드는 태그. 한 표에 한 쌍만 존재함. tr/table row/ 태그, th/table header/ 태그, td/table cell/ 태그와 함께 다니는 부모 태그. 자식 태그는 여러 개 가능.</li>
+                <li>title 태그는 웹 페이지의 제목을 나타내는 태그. 브라우저가 책 제목의 표지와 같이 인식하는 것.</li>
+                <li>meta 태그는 브라우저가 html 문서의 문자 인코딩 방식을 명시하는 태그. utf-8로 쓰여졌다면 meta 태그에 속성 charset을 써서 charset="utf-8"이라고 적으면 됨.</li>
+                <li>a(anchor) 태그는 링크(Hyper Text)를 거는 태그.</li>
+                <li>div 태그는 division의 약자로 레이아웃을 만들 때 사용함. 아무 의미가 없고, 디자인 용도로만 사용하는 태그. 기본적으로 block level element. 여러 속성을 추가해서 활용. 함께 쓰는 속성으로는 style, margin, width, height, background-color, float, border 등이 있음.</li>
+                <li>span 태그도 div 태그와 마찬가지로 디자인을 위한 태그. 다만, 이 태그는 inline element임. 따라서 사용하고 싶은 콘텐츠의 크기에 따라 사용하면 됨.</li>
+                <li>input 태그는 입력 형식을 구현하기 위한 태그. 함께 쓰는 type 속성의 속성값에 따라 화면에 다양한 걸 표시할 수 있음.</li>
+                <li>iframe 태그는 해당 웹페이지에 다른 html 파일을 불러와서 삽입, 합성할 수 있는 태그. src 속성으로 URL을 추가하고 height와 width 속성으로 크기 조절.</li>
+                <li>!-- 콘텐츠 -- 를 쓰면 그 안에 있는 콘텐츠는 없는 셈 치라고 명령하는 것.</li>
+                <li>style 태그는 HTML의 문법이면서 동시에 태그 안의 내용을 CSS의 문법으로 해석하라고 컴퓨터에 명령함.</li>
+                <li>/* 콘텐츠 */는 주석을 달 때 활용함.</li>
+                <li>link 태그는 웹 브라우저에게 웹페이지가 어떤 CSS 파일과 연결되어 있는지 알려 주는 태그. CSS 코드의 중복을 제거하기 위해 style.css 파일을 따로 만들어 중복되는 CSS 코드를 넣고, html 문서에 해당 파일의 코드를 다운로드받아서 원래 그 코드가 있었던 것처럼 동작하라고 선언하는 태그.</li>
+            </ul>
+            <br><br><h3>속성</h3><p><h4>태그만으로 부족한 정보를 채우는 게 속성. 여러 개를 쓸 수 있고 순서에 상관없이 결과값은 같음.</h4></p>
+            <ul>
+                <li>style 속성은 태그의 스타일을 지정함. 이걸로 다른 속성을 쓸 수도 있음.</li>
+                <li>src 속성은 태그의 속성 즉, URL을 의미함. 태그만으로는 어떤 정보를 넣을지 알 수 없음. 이때 부족한 정보를 추가하는 속성.</li>
+                <li>width 속성은 가로 크기를 조절할 때 쓰는 속성.</li>
+                <li>height 속성은 세로 크기를 조절할 때 쓰는 속성.</li>
+                <li>charset은 meta 태그와 함께 쓰는 속성. 어떤 문자로 인코딩할지 명시.</li>
+                <li>href(hyper text reference) 속성은 태그로 걸 링크의 정보를 제공하는 속성.</li>
+                <li>rel 속성은 link 태그의 속성으로 현재 문서와 외부 리소스 사이의 연관 관계를 명시하는 속성. link 태그의 필수 속성으로 반드시 명시되어야 함. 예시: rel="stylesheet"은 현재 문서에 연결될 외부 리소스가 스타일시트라는 뜻.</li>
+                <li>target 속성은 a 태그로 건 링크가 열릴 위치를 명시하는 속성. _blank는 새 탭에서 열기, _self는 현재 프레임에서 열기로 기본값, _parent는 현재 프레임의 부모 프레임에서 열기, _top은 현재 윈도우 전체에서 열기, 프레임 이름을 적으면 그 프레임에서 열기.</li>
+                <li>title 속성은 a 태그로 건 링크가 어떤 내용인지 툴팁으로 미리 알려 주는 속성.</li>
+                <li>float 속성은 정렬을 좌우하는 속성, 가운데 정렬은 안 됨.</li>
+                <li>margin 속성은 테두리와 테두리 사이에 여백을 주는 속성. 위, 아래, 옆에 px이나 %로 수치를 입력해 여백을 줄 수 있음.</li>
+                <li>border 속성은 테두리를 지정하는 속성. width, color, style 등을 세부적으로 조정할 수 있음.</li>
+                <li>background-color 속성은 배경의 색을 정하는 속성.</li>
+                <li>color는 글씨의 색을 바꾸는 속성. style 속성 안에 사용함.</li>
+                <li>type 속성은 input 태그의 속성으로, 해당 태그가 나타낼 타입을 명시함. 다양한 속성값이 있음. checkbox는 체크박스를 정의함. 속성값은 button, color, date, datetime-local, email, file, hidden, image, month, number, password, radio, range, reset, search, submit, tel, text, time, url, week 등.</li>
+                <li>class 속성은 어떠한 요소들을 하나의 클래스로 묶어 동일한 스타일을 적용하기 위해서 사용함. 속성값 saw를 사용하면 보았던 요소라는 정보를 줄 수 있음. 속성값 active는 지금 실행하고 있는 페이지라는 뜻. class에는 여러 개의 속성값을 쓸 수 있지만, 최근에 명령한 것(제일 마지막에 적은 것)에 우선순위가 적용된다는 단점이 있음.</li>
+                <li>id 속성은 속성값에 절대적인 우위를 주는 속성. 따라서 id 속성에 쓴 속성값은 동일 문서 내에서 다시 쓰면 안 됨. id의 속성값은 class의 속성값보다 나중에 등장하더라도 순위가 밀리지 않고 적용됨.</li>
+                <li>display 속성을 쓰면 태그가 사용하는 화면의 부피를 지정할 수 있음. block level element를 inline element로 바꾸거나, 그 반대도 가능.속성값에 block 또는 inline을 쓰면 됨. 속성값 none을 쓰면 태그가 화면에서 보이지 않음.</li>
+                <li>text-decoration: 텍스트의 밑줄 유무와 스타일을 지정하는 속성. none을 추가하면 밑줄 없어짐.</li>
+                <li>font-weight 속성은 텍스트의 굵기를 설정하는 속성.</li>
+                <li>font-size는 텍스트의 크기를 정하는 속성. 속성값이 다양하고, 구체적인 숫자 + %/px도 사용 가능</li>
+                <li>text-align은 텍스트를 정렬하는 속성.</li>
+                <li>padding 속성은 콘텐츠와 테두리 사이에 간격을 주는 속성.</li>
+                <li>grid 속성은 row와 columm을 이용해 아이템을 자유롭게 배치할 수 있는 속성. grid 이전의 flex는 수평과 수직 중 하나의 방향으로만 레이아웃을 나눌 수 있었지만, grid는 수평과 수직을 동시에 나눌 수 있음. 속성값 fr은 아이템이 쓰는 화면의 단위를 자동으로 조정하는 단위. 텍스트의 양에 따라 태그의 크기까지 자동 조정할 수 있음.</li>
+            </ul>
+            <br><br><h3>웹페이지 만들기</h3>
+            <ul>
+                <li>웹사이트를 링크로 엮으면 웹페이지가 됨. 목차에 링크를 달고, 링크 정보 속성에 각 목차에 맞는 html 문서(웹사이트) 링크를 넣어 주면 됨.</li>
+                <li>이 파일이 html 파일이라는 의미에서 제일 위에 관용적으로 '!doctype html'이라고 써 주면 됨.</li>
+                <li>댓글 기능 구현하기: DISQUS, LiveRe 등의 서비스를 사용해 웹페이지에 댓글 기능을 구현할 수 있음. 댓글 기능은 백엔드 기술이 필요하지만 이러한 서비스로 한번 구현해 볼 수는 있는 것. 다만 DISQUS를 이용하면 파일 형태로 열었을 땐 보안상의 이유로 서비스를 사용할 수 없음. 웹 서버로 열어야 작동함.</li>
+                <li>채팅 서비스 구현하기: tawk라는 서비스로 구현 가능.웹 서버로 열어야 작동함.</li>
+                <li>웹페이지 사용자 분석하기: Google Analytics를 활용해 사용자를 분석할 수 있음. 사용자 메뉴는 연령, 성별, 국가, 장치 등 사용자의 정보를 보여줌. 수명 주기는 사용자가 사이트에서 한 일을 보여주는 정보를 제공함. 인구 통계와 수명 주기에서 중요한 건 시간.</li>
+            </ul> 
+            <br><br><h3>웹페이지 배포</h3>
+            <ul>
+                <li>웹 호스팅<P>- 통신 업체나 전문 웹 개발 회사에서 서버를 임대해 주는 것. 인터넷에 연결된 각 컴퓨터(host)에 소프트웨어까지 빌려주는 사업. Cloud라고도 부름. 쉽지만 배울 수 있는 게 적음.</P><p>- GitHub: 개발자들이 안전하게 소스코드를 보관하고 협업하려고 만들었던 사이트.</p></li>
+                <li>웹 서버<p>- 자신의 컴퓨터에 웹 서버를 직접 설치하는 것. 어렵지만 배울 수 있는 게 많음.</p><p>- Live Server: 웹 서버의 일종. VS code의 확장 기능. 변경 사항이 실시간으로 적용된다는 특징이 있음. Go live 버튼으로 키고, Port 버튼으로 끔.</p></li>
+                <li>웹 호스팅으로 시작해서 웹 서버를 통해 원리를 공부하기.</li>
+                <li>웹 브라우저가 문서를 직접 열면 주소가 file:///Desktop/web/index.html로 뜸. 웹 서버를 통해 문서를 열면 주소는 http://127.0.0.1.5000/index.html로 뜸.</li>
+                <li>http://127.0.0.1.5000/index.html</li>
+                    <ul>
+                        <li>http: Hypertext Transfer Protocol, 하이퍼텍스트 통신 규약.</li>
+                        <li>127.0.0.1: Internet Protocol Address(인터넷에서 사용하는 주소, ip)의 일종. 약 43억 개가 있고, 그중 127.0.0.1은 전 세계에서 자신의 컴퓨터를 나타낼 때 쓰기로 약속한 ip. 따라서 주소창에 이 ip가 떠 있다면, 웹 브라우저가 자기 컴퓨터의 웹 서버에 접속하려고 시도하고 있다는 의미. 주로 개발할 때 많이 사용함.</li>
+                        <li>Port: 하나의 컴퓨터는 여러 웹 서버와 연결되어 있음. 이때 각 서버는 각자의 포트 번호를 가지고 있음.</li>
+                    </ul>
+                <li>모바일 웹 브라우저에서 컴퓨터의 웹 서버에 접속하기<p>- 같은 네트워크를 공유하고 있어야 함.</p><p>- 컴퓨터의 ip 주소와 포트 번호를 모바일 웹 브라우저에 입력하면 접속됨.</p></li>
+            </ul>
+            <br><br><h3>개념</h3>
+            <ul>
+                <li>Web Browser: 정보를 요청하는 client computer. 웹 클라이언트라고 불러도 OK.</li>
+                <li>Web Server: 요청에 응답해 정보를 전송하는 server computer. </li>
+                <li>Ex: 게임 클라이언트-게임 서버, 채팅 클라이언트-채팅 서버 등</li>
+            </ul>
+        </div>
+    </div>
     <br><br><br><p>
         <div id="disqus_thread"></div>
 <script>
