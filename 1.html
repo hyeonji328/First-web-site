@@ -13,6 +13,9 @@
         gtag('config', 'G-5XTC326PSJ');
     </script>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap" rel="stylesheet">
     <style>
         #only ul li{font-size: 15px; color: rgb(190, 175, 165);}
         body{margin: 10px;}
@@ -43,11 +46,11 @@
         </ol>
         <div id="article">
             <h2>HTML</h2>
-            <P><a href="https://www.w3.org/TR/2011/WD-html5-20110405/" target="_blank" title="html specification">Hypertext Markup Language (HTML)</a> is the standard markup language for <strong>creating <u>web</u> pages</strong> and web applications.</p>
-            <br><br><br><h3>연습</h3><p style="margin-top: 40px;"><h4><a href="https://youtu.be/zfLcdBuB7NY" target="_blank" title="Here Again_YouTube">Here Again</a></h4></p><img src="worship.jpg" width="500">
+            <P><a href="https://www.w3.org/TR/2011/WD-html5-20110405/" target="_blank" title="html specification" style="text-decoration: underline; color: chocolate;">Hypertext Markup Language (HTML)</a> is the standard markup language for <strong>creating <u>web</u> pages</strong> and web applications.</p>
+            <h2><a href="https://youtu.be/zfLcdBuB7NY" target="_blank" title="Here Again_YouTube">Here Again</a></h2><img src="worship.jpg" width="500">
             <p><iframe width="500" height="315" src="https://www.youtube.com/embed/HyjdUKMSM4E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
             <p>Can't go back to the beginning. Can't control what tomorrow will bring. But I know here in the middle, is the place where you promised to be. I'm not enough unless you come. Will you meet me here again?</p><p style="margin-top: 40px;">As I walk now through the valley. Let your love rise above every fear. Like the sun shaping the shadow, in my weakness, your glory appears. I'm not enough unless you come. Will you meet me here again?</p>
-            <br><br><br><h3>Tips</h3>
+            <h2>Tips</h2>
             <ul>
                 <li>웹 브라우저에서 html파일을 읽게 하고 싶을 때 단축키는 ctrl+O.</li>
                 <li>입력 커서를 여러 개 만들 때 alt키를 누르고 클릭하면 됨.</li>
@@ -56,7 +59,7 @@
                 <li>마우스 우클릭의 '검사' 항목. 문서의 태그, 속성 등을 분석한 자료를 한눈에 볼 수 있는 개발자 도구.</li>
                 <li>caniuse.com: 현재 웹브라우저들이 html, css, JavaScript 기술을 얼마나 채택하고 있는지 통계를 보여 주는 사이트. 초록색은 쓸 수 있고, 빨강색은 쓸 수 없다는 뜻. 연두색은 부분적으로 지원하고 있다는 의미. 어떤 기술을 사용했을 때 그것을 세계 인구 중 몇 퍼센트가 이용할 수 있는지도 알 수 있는 중요한 사이트.</li>
             </ul>
-            <br><br><h3>태그</h3>
+            <h2>태그</h2>
             <ul>
                 <li>html 태그는 최상위 태그. Html 파일의 모든 태그가 이 안에 들어감.</li>
                 <li>head 태그는 본문을 설명하는 정보를 묶는 태그. title이나 meta 태그가 이 안에 들어감. body 태그는 본문을 묶는 태그. <strong>Html 파일의 모든 코드는 head나 body 아래 속해야 함.</strong></li>
@@ -81,7 +84,8 @@
                 <li>/* 콘텐츠 */는 주석을 달 때 활용함.</li>
                 <li>link 태그는 웹 브라우저에게 웹페이지가 어떤 CSS 파일과 연결되어 있는지 알려 주는 태그. CSS 코드의 중복을 제거하기 위해 style.css 파일을 따로 만들어 중복되는 CSS 코드를 넣고, html 문서에 해당 파일의 코드를 다운로드받아서 원래 그 코드가 있었던 것처럼 동작하라고 선언하는 태그.</li>
             </ul>
-            <br><br><h3>속성</h3><p><h4>태그만으로 부족한 정보를 채우는 게 속성. 여러 개를 쓸 수 있고 순서에 상관없이 결과값은 같음.</h4></p>
+            <h2>속성</h2>
+            <strong><u>: 태그만으로 부족한 정보를 채우는 게 속성. 여러 개를 쓸 수 있고 순서에 상관없이 결과값은 같음.</strong></u>
             <ul>
                 <li>style 속성은 태그의 스타일을 지정함. 이걸로 다른 속성을 쓸 수도 있음.</li>
                 <li>src 속성은 태그의 속성 즉, URL을 의미함. 태그만으로는 어떤 정보를 넣을지 알 수 없음. 이때 부족한 정보를 추가하는 속성.</li>
@@ -108,7 +112,7 @@
                 <li>padding 속성은 콘텐츠와 테두리 사이에 간격을 주는 속성.</li>
                 <li>grid 속성은 row와 columm을 이용해 아이템을 자유롭게 배치할 수 있는 속성. grid 이전의 flex는 수평과 수직 중 하나의 방향으로만 레이아웃을 나눌 수 있었지만, grid는 수평과 수직을 동시에 나눌 수 있음. 속성값 fr은 아이템이 쓰는 화면의 단위를 자동으로 조정하는 단위. 텍스트의 양에 따라 태그의 크기까지 자동 조정할 수 있음.</li>
             </ul>
-            <br><br><h3>웹페이지 만들기</h3>
+            <h2>웹페이지 만들기</h2>
             <ul>
                 <li>웹사이트를 링크로 엮으면 웹페이지가 됨. 목차에 링크를 달고, 링크 정보 속성에 각 목차에 맞는 html 문서(웹사이트) 링크를 넣어 주면 됨.</li>
                 <li>이 파일이 html 파일이라는 의미에서 제일 위에 관용적으로 '!doctype html'이라고 써 주면 됨.</li>
@@ -116,7 +120,7 @@
                 <li>채팅 서비스 구현하기: tawk라는 서비스로 구현 가능.웹 서버로 열어야 작동함.</li>
                 <li>웹페이지 사용자 분석하기: Google Analytics를 활용해 사용자를 분석할 수 있음. 사용자 메뉴는 연령, 성별, 국가, 장치 등 사용자의 정보를 보여줌. 수명 주기는 사용자가 사이트에서 한 일을 보여주는 정보를 제공함. 인구 통계와 수명 주기에서 중요한 건 시간.</li>
             </ul> 
-            <br><br><h3>웹페이지 배포</h3>
+            <h2>웹페이지 배포</h2>
             <ul>
                 <li>웹 호스팅<P>- 통신 업체나 전문 웹 개발 회사에서 서버를 임대해 주는 것. 인터넷에 연결된 각 컴퓨터(host)에 소프트웨어까지 빌려주는 사업. Cloud라고도 부름. 쉽지만 배울 수 있는 게 적음.</P><p>- GitHub: 개발자들이 안전하게 소스코드를 보관하고 협업하려고 만들었던 사이트.</p></li>
                 <li>웹 서버<p>- 자신의 컴퓨터에 웹 서버를 직접 설치하는 것. 어렵지만 배울 수 있는 게 많음.</p><p>- Live Server: 웹 서버의 일종. VS code의 확장 기능. 변경 사항이 실시간으로 적용된다는 특징이 있음. Go live 버튼으로 키고, Port 버튼으로 끔.</p></li>
@@ -130,7 +134,7 @@
                     </ul>
                 <li>모바일 웹 브라우저에서 컴퓨터의 웹 서버에 접속하기<p>- 같은 네트워크를 공유하고 있어야 함.</p><p>- 컴퓨터의 ip 주소와 포트 번호를 모바일 웹 브라우저에 입력하면 접속됨.</p></li>
             </ul>
-            <br><br><h3>개념</h3>
+            <h2>개념</h2>
             <ul>
                 <li>Web Browser: 정보를 요청하는 client computer. 웹 클라이언트라고 불러도 OK.</li>
                 <li>Web Server: 요청에 응답해 정보를 전송하는 server computer. </li>
