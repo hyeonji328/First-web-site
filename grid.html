@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="image.css">
     </head>
     <body>
         <h1><a href="index.html">WEB</a></h1>
@@ -20,6 +21,7 @@
                 <li><a href="box.html" class="saw">박스 모델</a></li>
                 <li><a href="grid.html" class="saw" id="active">그리드</a></li>
                 <li><a href="mediaquery.html" class="saw">미디어쿼리</a></li>
+                <li><a href="area.html" class="saw">area 실습</a></li>
             </ol>
             <div id="article">
                 <h2>그리드</h2>
@@ -30,6 +32,9 @@
                 <p>어떤 셀에 어떤 아이템을 몇 개나 사용할지를 지정할 때 사용하는 것이 grid-column(row)-start와 grid-column(row)-end. grid-area를 grid-temaplate-areas와 함께 써서 어떤 영역에 표시될지 더 간단하게 지정할 수 있음.</p>
                 <p>기본적으로는 아이템 하나가 하나의 셀에 들어가지만,아이템에 class를 지정한 후 속성을 활용하면 아이템 하나가 여러 개의 셀에 들어가게 할 수 있음. 이때 사용하는 것이 grid-column(row)-start와 grid-column(row)-end고, 'grid-column: 줄 수 / 줄 수' 형태로 간단하게 축약해서 쓸 수 있음. 정확히 어느 줄인지 카운트할 수 없다면 span을 써서 시작 줄 기준으로 몇 개의 줄을 쓸 건지 지정할 수도 있음.</p>
                 <p>카운트하는 기준은 선(line). 제일 첫 번째 줄은 제일 왼쪽 혹은 위쪽에 있는 줄이고 1, 2, 3, 4, 5...으로 카운트함. 제일 마지막을 기준으로 세면 음수로 표기하여 -1, -2, -3...으로 카운트함.</p>
+                <h2>area</h2>
+                <p>area를 사용하면 아이템이 들어갈 위치를 줄을 카운트해서 start/end로 지정할 필요 없이 레이블을 정해서 각 아이템이 그 레이블에 들어가게 지정할 수 있음.</p>
+                <P>grid-temaplate-areas를 활용해 표시하고 각 줄에 들어갈 레이블 이름을 'a a a', 'b b c' 등으로 지정할 수 있음. 그러고 나서 각 아이템을 class 속성을 써서 묶은 후 특정 class가 어느 레이블에 들어갈지 grid-area로 지정해 주면 됨.</P>
                 <h2>함수</h2>
                     <ul>
                         <li>repeat: 동일한 걸 반복할 때 사용함. repeat(반복 횟수, 반복할 내용).</li>
