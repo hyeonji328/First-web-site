@@ -18,9 +18,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1><a href="index.html">WEB</a></h1>
-    <input type="button" value="night" onclick="document.querySelector('body').style.backgroundColor='black'; document.querySelector('body').style.color='white'; ">
-    <input type="button" value="day" onclick="document.querySelector('body').style.backgroundColor='white'; document.querySelector('body').style.color='black'; ">
+    <h1><a href="index.html" id="night">WEB</a></h1>
+    <input type="button" value="night" onclick="
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        document.querySelector('#night').style.color = 'white';
+    ">
+    <input type="button" value="day" onclick="
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        document.querySelector('#night').style.color = 'black'; 
+    ">
     <div id="grid">
         <ol><strong>프론트엔드</strong>
             <li><a href="1.html" class="saw">HTML</a></li>
@@ -38,7 +46,7 @@
                 <p>html의 script 태그를 이용해서 사용함. 이 태그 안에는 자바스크립트의 코드가 오기로 약속되어 있기에 브라우저는 태그 안의 코드를 자바스크립트로 해석함.</p>
                 <p>콘솔을 이용할 수도 있음. 마우스 오른쪽 키에서 '검사-콘솔'을 사용해 파일을 만들지 않고 즉석에서 자바스크립트를 실행할 수 있음. 여러 가지 데이터를 처리하는 데 사용할 수 있음. elements 창에서 esc를 눌러 console을 동시에 볼 수 있음. 콘솔 창에서 위 화살표를 누르면 바로 위에 쓴 값을 복사 붙여넣기 할 수 있음. 현재 보고 있는 웹페이지에 한해 자바스크립트를 실행하기 때문에 빠르고 간단하게, 필요에 맞게 자바스크립트를 사용할 수 있다는 장점이 있음. ex: length 코드를 이용해 문자열의 문자 수를 세고 alert 창으로 띄우게 하기.</p>
             <h2><a href="ex1.html" title="자바스크립트 예제"><u>예시</u></a></h2>-> 링크 참고
-            <h2>이벤트</h2>웹브라우저 위에서 어떠한 사건(event)가 일어났을 때 웹페이지가 반응하게 하는 html의 속성들. 이벤트를 사용해 사건이 일어났을 때 즉, 사용자가 웹브라우저에서 어떤 행동을 했을 때 웹페이지가 반응하게 하는 것. 자바스크립트가 사용자와 상호작용하는 데 핵심적인 역할을 하며, 이벤트들을 이용해서 사용자와 상호작용하는 웹페이지를 만들 수 있음.
+            <h2>이벤트</h2>웹브라우저 위에서 어떠한 사건(event)가 일어났을 때 웹페이지가 반응하게 하는 html의 속성들. 이벤트를 사용해 사건이 일어났을 때 즉, 사용자가 웹브라우저에서 어떤 행동을 했을 때 웹페이지가 반응하게 하는 것. 자바스크립트가 사용자와 상호작용하는 데 핵심적인 역할을 하며, 이벤트들을 이용해서 사용자와 상호작용하는 웹페이지를 만들 수 있음. 이벤트 속성의 속성값에는 자바스크립트 코드가 들어가야 함.
                 <ul>
                     <li>onclick: 사용자가 클릭하면 속성값에 있는 코드를 자바스크립트로 해석해 실행하게 하는 속성.</li>
                     <li>onchange: 해당 속성이 포함된 태그의 내용이 변경되었을 때 자바스크립트를 실행하는 속성.</li>
@@ -63,6 +71,10 @@
                     <li>산술 연산자(이항 연산자): 수식을 계산하게 해 주는 연산자. 왼쪽, 오른쪽 두 개의 항을 계산하는 연산자라 이항 연산자라고도 부름. 대표적인 것이 사칙연산 +, -, *(곱하기), /(나누기).</li>
                     <li>대입 연산자: 오른쪽 항의 값을 왼쪽 항에 대입하는 연산자. ex: =.</li> 
                 </ul>
+            <h2>제어할 태그 선택하기</h2>
+                <P>CSS의 선택자를 이용하면 훨씬 편하고 정교하게 선택할 수 있음. document.querySelector('selectors'); 구문을 사용함. 이 문서(document)에서 CSS의 선택자(Selector/id, class, element 등)가 ('선택자명')인 태그를 질문(query)한다는 의미.</P>
+                <p>예시: document.querySelector(".myclass");는 클래스가 myclass인 모든 태그를 선택하라는 의미.</p>
+                <p>CSS의 style을 JS로 주고 싶을 때는 .style을 사용함.</p>
         </div>
     </div>
 <br><br><br><p>
