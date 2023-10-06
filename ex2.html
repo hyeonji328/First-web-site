@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function moveHome(){
+            location.href = "/3.html"
+        }
+    </script>
+    <input type="button" value="되돌아가기" onclick="moveHome();">
+    <h1>Comparison operator & Boolean</h1>
+    <h2>===</h2>
+    <h3>1===1</h3>
+    <script>
+        document.write(1===1);
+    </script>
+
+    <h3>1===2</h3>
+    <script>
+        document.write(1===2);
+    </script>
+
+    <h3>1&lt;2</h3>
+    <!--html에서 꺾쇠 기호는 문법에 속하기 때문에 ~보다 작다를 표현할 때는 less than이라는 의미로 위의 기호를 대신 사용함.-->
+    <script>
+        document.write(1<2);
+    </script>
+
+    <h3>1&lt;1</h3>
+    <script>
+        document.write(1<1);
+    </script>
+</body>
+</html>

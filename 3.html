@@ -19,15 +19,18 @@
 </head>
 <body>
     <h1><a href="index.html" id="night">WEB</a></h1>
-    <input type="button" value="night" onclick="
+    <input id="night_day" type="button" value="night" onclick="
+    if(document.querySelector('#night_day').value === 'night'){
         document.querySelector('body').style.backgroundColor = 'black';
         document.querySelector('body').style.color = 'white';
         document.querySelector('#night').style.color = 'white';
-    ">
-    <input type="button" value="day" onclick="
+        document.querySelector('#night_day').value = 'day';
+    }else { 
         document.querySelector('body').style.backgroundColor = 'white';
         document.querySelector('body').style.color = 'black';
         document.querySelector('#night').style.color = 'black'; 
+        document.querySelector('#night_day').value = 'night';
+    }
     ">
     <div id="grid">
         <ol><strong>프론트엔드</strong>
@@ -60,6 +63,7 @@
                 <ul>
                     <li>숫자 number: 숫자 그대로 표현됨. 산술 연산자(+, -, *, /)를 이용해 콘솔에서 계산할 수 있음.</li>
                     <li>문자열 string: 문자는 따옴표로 감싸서 표현함. 작은따옴표와 큰따옴표 모두 쓸 수 있지만 문자의 앞뒤 따옴표를 같은 걸로 통일해 써야 함. properties와 methods 명령을 사용해 문자 데이터를 처릴할 수 있음. // properties ex: '.length'를 이용하면 문자열 내의 문자 수를 세어 줌 // methods ex: '.toUpperCase()'를 활용하면 문자열의 문자를 대문자로 변환해 줌. '.indexOf()를 쓰면 주어진 값과 일치하는(해당 값이 있는) 첫 번째 인덱스를 반환하고, 없으면 -1을 반환함. trim은 공백 삭제.</li>
+                    <li>Boolean: true와 false 단 두 개의 데이터만 가지고 있는 데이터 타입. 반복을 제거하는 데 쓸 수 있음.</li>
                 </ul>
             <h2>변수(variable) VS. 상수(constant)</h2>
                 <ul>
@@ -69,12 +73,17 @@
             <h2>연산자</h2>계산을 돕는 기호들.
                 <ul>
                     <li>산술 연산자(이항 연산자): 수식을 계산하게 해 주는 연산자. 왼쪽, 오른쪽 두 개의 항을 계산하는 연산자라 이항 연산자라고도 부름. 대표적인 것이 사칙연산 +, -, *(곱하기), /(나누기).</li>
-                    <li>대입 연산자: 오른쪽 항의 값을 왼쪽 항에 대입하는 연산자. ex: =.</li> 
+                    <li>대입 연산자: 오른쪽 항의 값을 왼쪽 항에 대입하는 연산자. ex: =.</li>
+                    <li>비교 연산자(Comparison operator): 좌항과 우항을 결합해서 어떤 데이터를 만드는 이항 연산자. 좌항과 우항을 비교해 둘이 같다면 true, 다르다면 false의 값을 도출해 냄. true와 false를 묶어서 <strong>Boolean</strong>이라고 칭함. ex: ==, ===, 부등호. <a href="ex2.html" title="조건문 예시"><u>예시 링크</u></a></li>
                 </ul>
             <h2>제어할 태그 선택하기</h2>
                 <P>CSS의 선택자를 이용하면 훨씬 편하고 정교하게 선택할 수 있음. document.querySelector('selectors'); 구문을 사용함. 이 문서(document)에서 CSS의 선택자(Selector/id, class, element 등)가 ('선택자명')인 태그를 질문(query)한다는 의미.</P>
                 <p>예시: document.querySelector(".myclass");는 클래스가 myclass인 모든 태그를 선택하라는 의미.</p>
                 <p>CSS의 style을 JS로 주고 싶을 때는 .style을 사용함.</p>
+                <p>value 값을 알고 싶을 때는 .value 사용.</p>
+            <h2>조건문</h2>
+                <p><a href="ex3.html" title="조건문 예시"><u>예시 링크</u></a></p>
+                <p>구문: if(조건식){statement1} else if(조건식){statement2} else{statment3}. 조건식의 값은 Boolean 즉, 참이나 거짓이어야 함. 조건식이 참이라면 if문이나 else if문의 {}가 실행되고, 거짓이라면 else의 {}가 실행됨. else if에는 개수 제한이 따로 없음.</p>
         </div>
     </div>
 <br><br><br><p>
