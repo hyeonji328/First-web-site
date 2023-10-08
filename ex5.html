@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function moveHome(){
+            location.href = "/3.html"
+        }
+    </script>
+    <input type="button" value="되돌아가기" onclick="moveHome();">
+    <h1>Loop</h1>
+    <ul>
+    <script>
+        var i = 0;
+        document.write('<li>1</li>');
+        while(i < 3){
+        document.write('<li>2</li>');
+        document.write('<li>3</li>');
+        i = i + 1;
+        }
+        document.write('<li>4</li>');
+    </script>
+    <!--제일 처음 코드를 실행했을 때 i의 값은 0이라 반복문이 참이므로 반복됨. 두 번째로 코드가 실행되면 반복문에 적힌 식대로 i의 값이 1 증가하여 i의 값은 1이므로 참이라서 또 반복됨. 세 번째로 실행하면 i의 또 1 증가하여 2이므로 반복됨. 네 번째로 실행하면 i의 값이 3이 되므로 반복문에 있는 식에 대입했을 때 거짓이 됨. 이에 따라 네 번째에서 반복이 종료되고, 다음 순서인 4번이 실행됨.-->
+    </ul>
+</body>
+</html>

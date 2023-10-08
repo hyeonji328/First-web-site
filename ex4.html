@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 예시</title>
+</head>
+<body>
+    <script>
+        function moveHome(){
+            location.href = "/3.html"
+        }
+    </script>
+    <input type="button" value="되돌아가기" onclick="moveHome();">
+    <h1>Array 배열</h1>
+    <h2>Syntax 배열의 문법</h2>
+    <script>
+        var verb = ['go', 'arrive'];
+    </script>
+    <h2>add</h2>
+    <script>
+        verb.push('get')
+        verb.push('count')
+    </script>
+    <h2>get 배열 값 가져오기</h2>
+    <script>
+        document.write(verb[0])
+    </script>
+    <h2>count</h2>
+    <script>
+        document.write(verb.length)
+    </script>
+</body>
+</html>
