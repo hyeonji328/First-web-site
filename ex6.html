@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function moveHome(){
+            location.href = "/3.html"
+        }
+    </script>
+    <input type="button" value="되돌아가기" onclick="moveHome();">
+    <h1>Loop & Array</h1>
+    <script>
+        var verb = ['go', 'make', 'be', 'get', 'arrive'];
+    </script>
+    <h2>verb</h2>
+    <ul>
+        <script>
+            var i = 0;
+            while(i<verb.length){
+            document.write('<li><a href="http://a.com/'+verb[i]+'">'+verb[i]+'</li>');
+            i = i + 1
+            }
+        </script>
+        <!--document.write를 이용해 <li> 태그를 만들고, 반복문으로 반복하게 한 뒤, 변수로 종료할 때를 정해준 것. 이때 배열에 i를 적은 것은 i의 수와 배열의 인덱스값이 일치하는 것을 활용하여 i만 적어 코드를 단순화한 것.-->
+        <!--조건식에 직접적인 데이터의 수를 넣으면 데이터값이 변할 때마다 조건식의 수도 바꿔줘야 하는 불편함이 생김. 이를 해결하기 위해 .length를 써서 데이터 수가 바뀌면 자동으로 카운트해 조건식의 수도 변하게 하는 것.-->
+        <!--각각의 배열의 원소값에 링크를 추가할 수도 있음. 링크 주소에 배열의 원소값을 배치하여 /다음에 원소가 들어오는 웹사이트 주소가 만들어짐.-->
+    </ul>
+</body>
+</html>
