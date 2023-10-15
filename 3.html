@@ -16,37 +16,43 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap" rel="stylesheet">
-</head>
-<body>
-    <h1><a href="index.html" id="night">WEB</a></h1>
-    <input type="button" value="night" onclick="
-    var target =  document.querySelector('body'); var head = document.querySelector('#night');
-    if(this.value === 'night'){
+    <script>
+    function nightDayHandler(self){
+        var target =  document.querySelector('body'); var head = document.querySelector('#night');
+        if(self.value === 'night'){
         target.style.backgroundColor = 'black';
         target.style.color = 'white';
         head.style.color = 'white';
-        this.value = 'day';
+        self.value = 'day';
 
         var alist = document.querySelectorAll('a:not(ol.no a)');
         var i = 0;
         while (i < alist.length) {
             alist[i].style.color = 'beige';
             i = i + 1;
-        }
+            }
 
-    }else { 
+         } else { 
         target.style.backgroundColor = 'white';
         target.style.color = 'black';
         head.style.color = 'black'; 
-        this.value = 'night';
+        self.value = 'night';
 
         var alist = document.querySelectorAll('a:not(ol.no a)');
         var i = 0;
         while (i < alist.length) {
             alist[i].style.color = 'black';
             i = i + 1;
+            }
         }
     }
+    </script>
+    <!--nightDayHandler 함수의 self: 조건문 안에 있는 this는 원래 있던 위치인 input 태그의 이벤트속성에 속했을 때엔 이벤트속성이 있는 태그 즉, input 태그를 가리켰지만, 독립된 함수로 만들어 위치를 옮기면서 this가 가리키는 대상이 전역객체로 바뀜. 이에 따라 원래 의도대로 동작하게 하기 위해 함수에 self라는 매개변수를 만들고, 함수를 호출할 때 인자로 this를 넣은 것. 그러면 함수를 호출했을 때 인자인 this가 매개변수인 self로 치환되어 함수 내용이 정상적으로 작동함.-->
+</head>
+<body>
+    <h1><a href="index.html" id="night">WEB</a></h1>
+    <input type="button" value="night" onclick="
+        nightDayHandler(this);
     ">
     <div id="grid">
         <ol class="no"><strong>프론트엔드</strong>
@@ -123,18 +129,8 @@
         </div>
     </div>
     <input type="button" value="night" onclick="
-    var target =  document.querySelector('body'); var head = document.querySelector('#night');
-    if(this.value === 'night'){
-        target.style.backgroundColor = 'black';
-        target.style.color = 'white';
-        head.style.color = 'white';
-        this.value = 'day';
-    }else { 
-        target.style.backgroundColor = 'white';
-        target.style.color = 'black';
-        head.style.color = 'black'; 
-        this.value = 'night';
-    }
+    var alist = document.querySelectorAll('a:not(ol.no a)')
+    nightDayHandler(this)
     ">
 <br><br><br><p>
         <div id="disqus_thread"></div>
