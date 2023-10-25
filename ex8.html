@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function moveHome(){
+            location.href = "/3.html"
+        }
+    </script>
+    <input type="button" value="되돌아가기" onclick="moveHome();">
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+        var coworkers = {
+            'programmer':'Lucy',
+            'designer':'Emma'
+        };
+        document.write('programmer : '+coworkers.programmer+'<br>');
+        document.write('desinger : '+coworkers.designer+'<br>');
+        coworkers.bookkeeper = 'Jekyll';
+        document.write('bookkeeper : '+coworkers.bookkeeper+'<br>');
+        coworkers['data scientist'] = 'Hyde';
+        document.write('data scientist : '+coworkers['data scientist']+'<br>');
+    </script>
+    <!--coworkers라는 객체를 만들고 document.write로 객체를 불러온 것. coworkers.programmer에서 온점(.)은 object acess operator라고 부름.-->
+    <!--이미 만들어진 객체에 정보를 추가할 때는 위의 예와 같이 해당 변수에 온점을 찍고 정보를 추가한 다음 데이터를 불러오면 됨.-->
+    <!--객체의 이름에는 띄어쓰기를 할 수 없음. 이때 []를 사용하여 안에 문자열로 적어 주면 온점이 없이도 객체에 정보를 추가할 수 있음. 대괄호를 사용해서 띄어쓰기가 있는 이름을 적은 정보는 불러올 때에도 대괄호를 함께 적어 줘야 정상적으로 작동함.-->
+    <h2>Iterate</h2>
+    <p>순환해서 가져오기, 배열에서 반복문을 이용해 정보를 가져왔던 것과 같은 것</p>
+    <script>
+        for(var key in coworkers) {
+            document.write(key+' : '+coworkers[key]+'<br>');
+        }
+    </script>
+    <!--for(var key in coworkers){}의 의미: for in 문을 사용해 coworkers라는 변수가 가리키는 객체 내의 key 값들을 가져오는 것. key 값이란 가져오고 싶은 정보에 도달할 수 있는 열쇠인 값을 의미함. 따라서 위의 예시에서는 programmer, designer, bookkeeper, data scitentis가 key 값. 배열에서는 정보가 순서대로 나열되어 있기 때문에 index라고 부름. 객체 안에 있는 key 값들을 하나하나 가져와서 중괄호에 있는 코드를 실행해 주는 명령이 for in. key 값의 수만큼 중괄호 안의 코드가 반복됨.-->
+    <!--for in 문의 key는 객체에서 순회하는 속성인 key 값들을 대표하는 변수. [] 안의 key 역시 변수로, 객체의 key 값과 연관된 데이터 값에 접근하기 위해서 사용됨. 따라서 document.write(key+' : '+coworkers[key]+'<br>')에서 key는 속성명을 나타내고, coworkers[key]는 객체 내에서 그 속성과 연관된 데이터 값을 나타내 줌. -->
+</body>
+</html>
