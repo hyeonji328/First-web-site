@@ -17,7 +17,7 @@
     <script>
         var coworkers = {
             'programmer':'Lucy',
-            'designer':'Emma'
+            'designer':'Emma' // coworkers라는 객체에 Lucy, Emma라는 정보를 programmer, designer라는 이름표를 붙여서 정리한 것. 객체를 만들 땐 그냥 정보만 담는 것이 아니라, 그게 어떤 정보인지도 같이 정리해 담아야 함.
         };
         document.write('programmer : '+coworkers.programmer+'<br>');
         document.write('desinger : '+coworkers.designer+'<br>');
@@ -28,7 +28,7 @@
     </script>
     <!--coworkers라는 객체를 만들고 document.write로 객체를 불러온 것. coworkers.programmer에서 온점(.)은 object acess operator라고 부름.-->
     <!--이미 만들어진 객체에 정보를 추가할 때는 위의 예와 같이 해당 변수에 온점을 찍고 정보를 추가한 다음 데이터를 불러오면 됨.-->
-    <!--객체의 이름에는 띄어쓰기를 할 수 없음. 이때 []를 사용하여 안에 문자열로 적어 주면 온점이 없이도 객체에 정보를 추가할 수 있음. 대괄호를 사용해서 띄어쓰기가 있는 이름을 적은 정보는 불러올 때에도 대괄호를 함께 적어 줘야 정상적으로 작동함.-->
+    <!--객체의 이름에는 띄어쓰기를 할 수 없음. 문법적으로 오류이기 때문. 이때 []를 사용하여 안에 문자열로 적어 주면 온점이 없이도 객체에 정보를 추가할 수 있음. 대괄호를 사용해서 띄어쓰기가 있는 이름을 적은 정보는 불러올 때에도 대괄호를 함께 적어 줘야 정상적으로 작동함.-->
     <h2>Iterate</h2>
     <p>순환해서 가져오기, 배열에서 반복문을 이용해 정보를 가져왔던 것과 같은 것</p>
     <script>
@@ -36,7 +36,19 @@
             document.write(key+' : '+coworkers[key]+'<br>');
         }
     </script>
-    <!--for(var key in coworkers){}의 의미: for in 문을 사용해 coworkers라는 변수가 가리키는 객체 내의 key 값들을 가져오는 것. key 값이란 가져오고 싶은 정보에 도달할 수 있는 열쇠인 값을 의미함. 따라서 위의 예시에서는 programmer, designer, bookkeeper, data scitentis가 key 값. 배열에서는 정보가 순서대로 나열되어 있기 때문에 index라고 부름. 객체 안에 있는 key 값들을 하나하나 가져와서 중괄호에 있는 코드를 실행해 주는 명령이 for in. key 값의 수만큼 중괄호 안의 코드가 반복됨.-->
-    <!--for in 문의 key는 객체에서 순회하는 속성인 key 값들을 대표하는 변수. [] 안의 key 역시 변수로, 객체의 key 값과 연관된 데이터 값에 접근하기 위해서 사용됨. 따라서 document.write(key+' : '+coworkers[key]+'<br>')에서 key는 속성명을 나타내고, coworkers[key]는 객체 내에서 그 속성과 연관된 데이터 값을 나타내 줌. -->
+    <!--for(var key in coworkers){}의 의미: for in 문을 사용해 coworkers라는 변수가 가리키는 객체 내의 key 값들을 가져오는 것. Key란 가져오고 싶은 정보에 도달할 수 있는 열쇠를 의미함. 따라서 위의 예시에서는 programmer, designer, bookkeeper, data scitentis가 key. 그 key에 해당하는 데이터 값인 Lucy, Emma, Jekyll, Hyde가 key 값. 배열에서는 정보가 순서대로 나열되어 있기 때문에 index라고 부름. 객체 안에 있는 key를 하나하나 가져와서 중괄호에 있는 코드를 실행해 주는 명령이 for in. key의 수만큼 중괄호 안의 코드가 반복됨.-->
+    <!--for in 문의 key는 객체에서 순회하는 속성인 key 값들을 대표하는 변수. [] 안의 key 역시 변수로, 객체의 key 값과 연관된 데이터 값에 접근하기 위해서 사용됨. 따라서 document.write(key+' : '+coworkers[key]+'<br>')에서 key는 속성명(이름표)을 나타내고, coworkers[key]는 객체 내에서 그 속성과 연관된 데이터 값(이름표가 나타내는 정보)을 나타내 줌. -->
+    <h2>Property & Method</h2>
+    <script>
+        coworkers.showAll = function(){
+            for(var key in this) {
+            document.write(key+' : '+this[key]+'<br>');
+         }
+        }
+        // function showAll(){} 혹은 var showAll = function(){}라고 정의하는 것과 같은 것. 위의 예는 coworkers라는 객체에 소속된 변수인 showAll의 값으로 함수를 지정해서 결론적으로 객체에 소속된 함수인 메소드를 만든 것, 두 번째는 가장 기본적인 함수 정의 방법, 세 번째는 변수 showAll이 함수라고 정의한 것. 즉, 함수를 정의하는 데에는 다양한 방법이 있음.
+        // coworkers라는 객체의 showAll이라는 함수를 호출하면 {} 안의 코드가 실행되는 것. 하지만 함수 안에 객체의 이름을 직접적으로 작성해 놓으면 객체의 이름이 바뀌었을 때 함수 내의 객체명도 바꿔야 한다는 단점이 생김. 이때 사용하는 것이 this(함수가 소속되어 있는 객체를 가리키는 약속된 기호). this를 사용하면 this가 자기 자신을 가리키기 때문에 객체의 이름이 바뀌더라도 영향을 받지 않음.
+        // showAll 역시 coworkers라는 객체에 소속된 데이터이기 때문에 웹 페이지에 함께 표시된다는 단점이 있음. 이건 if문을 이용해 showAll을 제외하는 코드를 써서 해결 가능.
+        coworkers.showAll();
+    </script>
 </body>
 </html>

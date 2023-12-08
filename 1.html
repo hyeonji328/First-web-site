@@ -20,11 +20,14 @@
         #only ul li{font-size: 15px; color: rgb(190, 175, 165);}
         body{margin: 10px;}
     </style>
-    <!--위의 코드의 뜻은 문서의 모든 a 태그의 폰트색을 바꾸라는 것-->
+    <script src="colors.js"></script>
 </head>
 <body>
     <h1><a href="index.html">WEB</a></h1>
-    <div id="grid"><ol><strong>프론트엔드</strong>
+    <input type="button" value="night" onclick="
+        nightDayHandler(this);
+    ">
+    <div id="grid"><ol class="no"><strong>프론트엔드</strong>
             <li><a href="1.html" class="saw" id="active">HTML</a></li>
                 <span id="only">
                     <ul>
