@@ -1,26 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Checkbox Test</title>
+        <meta charset="utf-8">
+        <title>박스 모델</title>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap" rel="stylesheet">
         <style>
-            body{background-color: rgb(253, 241, 220);}
-            h2{color:brown; text-decoration: underline;}
-            input[type=checkbox] {vertical-align: middle; position: relative; bottom: 1px;}
-            label {display: block;}
+            body{margin: 10px;}
         </style>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5XTC326PSJ"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-5XTC326PSJ');
-        </script>
         <script src="colors.js"></script>
         <link rel="import" href="toc.html">
     </head>
@@ -53,17 +42,7 @@
                 }
             </script>
             <div id="article">
-                <h2>Checkbox Test</h2>
-                    <form>
-                        <label>
-                            <input type="checkbox">
-                        첫 번째 항목
-                        </label>
-                        <label>
-                            <input type="checkbox">
-                        두 번째 항목
-                        </label>
-                    </form>
+                <h2>박스 모델</h2><P>태그 하나하나를 하나의 박스로 취급해서 레이아웃을 생성하거나 정렬하는 것. CSS의 모든 요소는 박스에 들어가고 이 박스를 이용해 디자인함. block과 inline이라는 크게 두 개의 박스가 있음. 화면 전체를 사용하는 태그를 block level element라고 하고, 자기 콘텐츠만큼만 쓰는 태그를 inline element라고 함. 이 둘은 display 속성의 기본값이라 CSS로 언제든 바꿀 수 있음.</P>
             </div>
         </div>
     </body>

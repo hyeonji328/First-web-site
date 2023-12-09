@@ -1,5 +1,13 @@
-a{color: black; 
+a{color: rgb(0, 0, 0); 
   text-decoration: none;
+}
+
+#tocContainer a:visited {
+  color: rgb(148, 148, 148);
+}
+
+#tocContainer a.current-page {
+  color: rgb(211, 132, 79);
 }
 
 h1{font-size:45px; 
@@ -10,24 +18,17 @@ h1{font-size:45px;
   font-family: 'Times New Roman', Times, serif;
 }
 
-#active{
-  color: brown;
-}
-
-.saw{
-  color: darkgray;
-}
-
 #grid{
   display: grid; 
   grid-template-columns: 150px 1fr;
   font-family: 'Gowun Batang', serif;
 }
 
-#grid ol{
+#grid #tocContainer{
   margin: 0; 
-  padding: 33px; 
-  width: 100px; 
+  padding-left: 15px;
+  padding-right: 33px; 
+  width: 115px; 
   border-right: 1px solid black;
 }
   /*#grid ol은 id 값이 grid인 부모 태그를 가진 ol이라는 뜻. 보다 구체적으로 묶을 수 있는 선택자.*/
@@ -36,7 +37,7 @@ h1{font-size:45px;
   padding-left: 45px;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:600px) {
     #grid{display: block;}
     #grid ol{border-right: none;}
     h1{border-bottom: none; font-size: 35px; text-align: left;}
