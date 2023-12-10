@@ -8,7 +8,7 @@
 <body>
     <script>
         function moveHome(){
-            location.href = "/3.html"
+            location.href = "/JavaScript.html"
         }
     </script>
     <input type="button" value="되돌아가기" onclick="moveHome();">
@@ -17,8 +17,9 @@
     <script>
         var coworkers = {
             'programmer':'Lucy',
-            'designer':'Emma' // coworkers라는 객체에 Lucy, Emma라는 정보를 programmer, designer라는 이름표를 붙여서 정리한 것. 객체를 만들 땐 그냥 정보만 담는 것이 아니라, 그게 어떤 정보인지도 같이 정리해 담아야 함.
+            'designer':'Emma' 
         };
+        // coworkers라는 객체에 Lucy, Emma라는 정보(값)를 programmer, designer라는 이름을 붙여서 정리한 것. 객체를 만들 땐 그냥 정보만 담는 것이 아니라, 그게 어떤 정보인지도 같이 정리해 담아야 함.
         document.write('programmer : '+coworkers.programmer+'<br>');
         document.write('desinger : '+coworkers.designer+'<br>');
         coworkers.bookkeeper = 'Jekyll';
