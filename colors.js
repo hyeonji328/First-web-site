@@ -1,22 +1,28 @@
 var Links = {
     setColor: function(color){
-        var alist = document.querySelectorAll('a:not(ol.no a)');
-        var i = 0;
-        while (i < alist.length) {
-        alist[i].style.color = color;
-        i++; // i++는 'i = i + 1'과 같은 뜻.
-        }
+        // var alist = document.querySelectorAll('a:not(ol.no a)');
+        // var i = 0;
+        // while (i < alist.length) {
+        // alist[i].style.color = color;
+        // i++; // i++는 'i = i + 1'과 같은 뜻.
+        // }
+        $('a').not(function(){
+            return $(this).closest('#nope').length > 0;
+        }).css('color', color);
+        // $('a').css('color', color); 이 코드가 위에 주석 처리되어 있는 저 많은 코드와 같은 동작을 실행함. jquery의 css 함수를 쓰면 함수가 저런 작업을 내부적으로 알아서 실행하는 것.
     }
 }
 
 var Body = {
     setColor:function (color){
-        document.querySelector('body').style.color = color;
+        // document.querySelector('body').style.color = color;
+        $('body').css('color', color);
     }, 
     // Body라는 변수에 중괄호를 이용해 객체를 담고, 그 객체의 property로 setcolor를 넣은 다음 그 안에 함수를 지정한 것. 객체 Body의 변수 setColor를 호출하면 그에 지정된 함수 내의 코드가 실행됨.
     // **중요** 객체는 property와 property를 구분할 때 콤마를 찍음. 콤마가 없으면 오류가 나서 정상적으로 작동하지 않음.
     setBackgroundColor:function (color){
-        document.querySelector('body').style.backgroundColor = color;
+        // document.querySelector('body').style.backgroundColor = color;
+        $('body').css('backgroundColor', color);
     }
 }
 
