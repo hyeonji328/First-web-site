@@ -26,17 +26,26 @@ var Body = {
     }
 }
 
+var BorderColor = {
+    setBorderColor:function (color){
+        $('h1').css('border-bottom-color', color);
+        $('#tocContainer').css('border-right-color', color);
+    }
+}
+
 function nightDayHandler(self){
 
     if(self.value === 'night'){
         Body.setBackgroundColor('black');
         Body.setColor('white');
+        BorderColor.setBorderColor('white');
         self.value = 'day';
         Links.setColor('beige');
 
      } else { 
         Body.setBackgroundColor('white');
         Body.setColor('black');
+        BorderColor.setBorderColor('black');
         self.value = 'night';
         Links.setColor('black');
      
