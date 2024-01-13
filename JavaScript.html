@@ -24,7 +24,7 @@
     <h1><a href="index.html" id="night">WEB</a></h1>
     <input type="button" value="night" onclick="
         nightDayHandler(this);
-    ">
+    " class="button">
     <div id="grid">
         <div id="tocContainer"></div>
         <script>
@@ -48,7 +48,7 @@
                 });
             }
             // links 변수: id값이 #tocContainer인 태그 안의 a 태그가 모두 선택됨.
-            // currentPage 변수: window.location.pathname이라는 property에서 split 함수를 이용해 /를 기준으로 파일명을 나누고, pop 메소드로 파일명의 가장 마지막 요소를 반환함.
+            // currentPage 변수: window.location.pathname이라는 property에서 split 메소드를 이용해 /를 기준으로 파일명을 나누고, pop 메소드로 파일명의 가장 마지막 요소를 반환함.
             // window.location.pathname 속성: 현재 URL의 이름 중 도메인 이름을 제외한 경로를 포함함. 예를 들어 URL이 'https://example.com/path/to/your/page.html'라면 window.location.pathname은 '/path/to/your/page.html'이 되는 것.
             // forEach 메소드: 배열의 각 요소에 콜백 함수를 요소의 수만큼 실행하는 메소드. 인자 값으로 콜백 함수를 넣을 수 있음.
             // links.forEach(function(link): 변수 links에 forEach 메소드를 적용하면 변수 links의 결과인 모든 a태그에 대해서 콜백 함수가 실행됨. endsWtih 메소드를 이용해 링크의 href가 변수 currentPage와 똑같이 끝나는지 확인함. 똑같이 끝나서 결과값으로 참을 도출하면 조건문의 조건식이 참이 되어 조건문의 코드가 실행됨. classList 속성을 사용했기 때문에 link의 현재 css class 목록이 반환되고, add 메소드에 의해 지정한 클래스 값인 current-page가 class 목록에 추가됨. 
@@ -156,9 +156,8 @@
         </div>
     </div>
     <input type="button" value="night" onclick="
-    var alist = document.querySelectorAll('a:not(ol.no a)')
-    nightDayHandler(this)
-    ">
+    nightDayHandler(this);
+    " class="button">
 <br><br><br><p>
         <div id="disqus_thread"></div>
 <script>

@@ -33,22 +33,28 @@ var BorderColor = {
     }
 }
 
+var ButtonSync = {
+    buttonSync:function (value){
+        $('input.button').attr('value', value)
+    }
+}
+
 function nightDayHandler(self){
 
     if(self.value === 'night'){
         Body.setBackgroundColor('black');
         Body.setColor('white');
         BorderColor.setBorderColor('white');
-        self.value = 'day';
+        ButtonSync.buttonSync('day');
         Links.setColor('beige');
 
      } else { 
         Body.setBackgroundColor('white');
         Body.setColor('black');
         BorderColor.setBorderColor('black');
-        self.value = 'night';
+        ButtonSync.buttonSync('night');
         Links.setColor('black');
-     
+    
     }
         
 }
